@@ -99,7 +99,7 @@ namespace CSVImporter
 
                 sw.Stop();
 
-                MessageBox.Show(string.IsNullOrEmpty(msg) ? string.Format( "导入成功！共耗时:{0}秒",sw.Elapsed.Seconds.ToString()) : msg);
+                MessageBox.Show(string.IsNullOrEmpty(msg) ? string.Format( "导入成功！共耗时:{0}秒",sw.Elapsed.TotalSeconds.ToString()) : msg);
 
                 button3.Text = "开始导入";
                 button3.Enabled = true;
