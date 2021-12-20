@@ -125,7 +125,7 @@ namespace CSVImporter
                 sb.AppendFormat("CREATE TABLE [dbo].[{0}](", tablename);
                 var list = colsdef.ToList();
                 for (int i = 0; i < list.Count; i++) {
-                    sb.AppendFormat("[{0}] [VARCHAR]({1}) NULL", list[i].Key,list[i].Value*2);
+                    sb.AppendFormat("[{0}] [VARCHAR]({1}) NULL", list[i].Key,list[i].Value>0 ? list[i].Value*2 : 50);
                     if (i < list.Count - 1) {
                         sb.Append(",");
                     }
